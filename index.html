@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EkoDönüşüm | Geri Dönüşüm ve Sürdürülebilirlik Rehberi</title>
+  <meta name="description" content="Geri dönüşüm rehberi, atık ayrıştırma kuralları, doğaya katılan değer hesaplayıcısı ve sürdürülebilir yaşam tüyoları.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span><i class="fa-solid fa-leaf"></i> <strong>Sıfır Atık Hareketi:</strong> 1 ton dönüştürülen kağıt tam 17 yetişkin ağacı kurtarır!</span>
+      <a href="#rehber" class="announcement-link">Atıkları Öğren <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-recycle"></i></div>
+        <div class="logo-text">
+          <span>Eko</span>Dönüşüm
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Anasayfa</a>
+        <a href="#rehber" class="nav-link">Atık Rehberi</a>
+        <a href="#hesaplayici" class="nav-link">Eko-Hesaplayıcı</a>
+        <a href="#efsaneler" class="nav-link">Efsane vs Gerçek</a>
+        <a href="#quiz" class="nav-link">Eko-Test</a>
+        <a href="#ipuclari" class="nav-link">Upcycling & Kompost</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Gece/Gündüz Modu">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#rehber" class="btn btn-primary btn-sm nav-btn">
+          <i class="fa-solid fa-magnifying-glass"></i> Atık Sorgula
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-earth-americas"></i> Geleceğimizi Birlikte Dönüştürelim
+          </div>
+          <h1 class="hero-title">
+            Daha Temiz Bir Dünya İçin <br>
+            <span class="gradient-text">Geri Dönüştür, Yaşat!</span>
+          </h1>
+          <p class="hero-description">
+            Her gün ürettiğimiz atıkların doğada yok olma sürelerini öğrenin, doğru ayrıştırma yöntemleriyle ekolojik ayak izinizi küçültün ve doğaya kattığınız değeri hesaplayın.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#rehber" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-arrow-down-short-wide"></i> Atık Rehberini Keşfet
+            </a>
+            <a href="#hesaplayici" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-calculator"></i> Tasarrufunu Hesapla
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <i class="fa-solid fa-circle-check text-success"></i> %100 Doğrulanmış Bilgi
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-circle-check text-success"></i> İnteraktif Hesaplayıcı
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-circle-check text-success"></i> Sıfır Atık İpuçları
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-card">
+            <img src="assets/hero.jpg" alt="Doğa ve Geri Dönüşüm Görseli" class="hero-img">
+            <div class="hero-floating-card card-1">
+              <div class="floating-icon"><i class="fa-solid fa-tree"></i></div>
+              <div>
+                <h4>17 Ağaç</h4>
+                <p>1 Ton Kağıt Tasarrufu</p>
+              </div>
+            </div>
+            <div class="hero-floating-card card-2">
+              <div class="floating-icon icon-lightning"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h4>%95 Enerji</h4>
+                <p>Alüminyum Geri Dönüşümü</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTER STRIP -->
+    <section class="stats-section">
+      <div class="container stats-container">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-bottle-water"></i></div>
+          <div class="stat-number" data-target="450">0</div>
+          <div class="stat-unit">Yıl</div>
+          <p class="stat-label">Plastik Şişenin Doğada Yok Olma Süresi</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-unit">%</div>
+          <p class="stat-label">Cam Malzemenin Sonsuz Geri Dönüştürülebilirliği</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <div class="stat-number" data-target="95">0</div>
+          <div class="stat-unit">%</div>
+          <p class="stat-label">Alüminyum Kutu Dönüşümü Enerji Tasarrufu</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+          <div class="stat-number" data-target="1000000">0</div>
+          <div class="stat-unit">Litre</div>
+          <p class="stat-label">1 Litre Atık Yağın Kirletebileceği Su</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATERIAL & WASTE RECYCLING GUIDE -->
+    <section class="section guide-section" id="rehber">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Etkileşimli Arama & Filtreleme</span>
+          <h2 class="section-title">Atık & Malzeme Rehberi</h2>
+          <p class="section-desc">Evde veya işte karşılaştığınız ürünleri arayın, ne şekilde geri dönüştürüleceğini ve doğada ne kadar süre kaldığını anında öğrenin.</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="guide-controls">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="materialSearch" placeholder="Atık veya malzeme yazın (örn. Süt kutusu, Pil, Yağlı pizza kutusu, Cam kavanoz...)" autocomplete="off">
+            <button class="clear-search" id="clearSearch" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <div class="category-tabs" id="categoryTabs">
+            <button class="tab-btn active" data-category="all">Tümü</button>
+            <button class="tab-btn" data-category="plastik"><i class="fa-solid fa-bottle-water"></i> Plastik</button>
+            <button class="tab-btn" data-category="kagit"><i class="fa-solid fa-box-archive"></i> Kağıt & Karton</button>
+            <button class="tab-btn" data-category="cam"><i class="fa-solid fa-wine-bottle"></i> Cam</button>
+            <button class="tab-btn" data-category="metal"><i class="fa-solid fa-prescription-bottle"></i> Metal</button>
+            <button class="tab-btn" data-category="elektronik"><i class="fa-solid fa-plug"></i> Elektronik (E-Atık)</button>
+            <button class="tab-btn" data-category="tehlikeli"><i class="fa-solid fa-triangle-exclamation"></i> Tehlikeli & Organik</button>
+          </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="materials-grid" id="materialsGrid">
+          <!-- Dynamically Populated by JS -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display:none;">
+          <i class="fa-solid fa-box-open"></i>
+          <h3>Aradığınız atık türü bulunamadı</h3>
+          <p>Lütfen farklı bir kelime deneyin veya kategoriler arasında geçiş yapın.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECO IMPACT CALCULATOR -->
+    <section class="section calculator-section" id="hesaplayici">
+      <div class="container">
+        <div class="calculator-card">
+          <div class="calc-header">
+            <span class="section-subtitle light">Etki Analizi</span>
+            <h2 class="section-title text-white">Eko-Hesaplayıcı: Doğaya Katkını Görmek İster misin?</h2>
+            <p class="text-white-80">Aylık geri dönüştürdüğün ortalama malzeme miktarlarını gir; kurtardığın ağaç, su ve sağladığın enerji tasarrufunu anında gör!</p>
+            <div class="calc-ai-notice">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Girilen Bilgiler Arka Planda Yapay Zeka Tarafından Hesaplanmaktadır</span>
+            </div>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Inputs -->
+            <div class="calc-inputs">
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label for="inputPlastic"><i class="fa-solid fa-bottle-water text-teal"></i> Plastik Şişe / Ambalaj (Adet/Ay)</label>
+                  <span class="input-val-display" id="valPlastic">30 Adet</span>
+                </div>
+                <input type="range" id="inputPlastic" min="0" max="200" value="30" class="range-slider">
+              </div>
+
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label for="inputPaper"><i class="fa-solid fa-newspaper text-teal"></i> Kağıt / Karton (Kg/Ay)</label>
+                  <span class="input-val-display" id="valPaper">10 Kg</span>
+                </div>
+                <input type="range" id="inputPaper" min="0" max="100" value="10" class="range-slider">
+              </div>
+
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label for="inputGlass"><i class="fa-solid fa-wine-bottle text-teal"></i> Cam Şişe / Kavanoz (Adet/Ay)</label>
+                  <span class="input-val-display" id="valGlass">15 Adet</span>
+                </div>
+                <input type="range" id="inputGlass" min="0" max="100" value="15" class="range-slider">
+              </div>
+
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label for="inputCan"><i class="fa-solid fa-prescription-bottle text-teal"></i> Alüminyum / İçecek Kutusu (Adet/Ay)</label>
+                  <span class="input-val-display" id="valCan">20 Adet</span>
+                </div>
+                <input type="range" id="inputCan" min="0" max="100" value="20" class="range-slider">
+              </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="calc-results">
+              <div class="eco-badge-level" id="ecoBadgeLevel">
+                <i class="fa-solid fa-award"></i>
+                <span id="badgeTitle">Geri Dönüşüm Destekçisi</span>
+              </div>
+
+              <div class="results-grid">
+                <div class="res-card">
+                  <div class="res-icon"><i class="fa-solid fa-tree"></i></div>
+                  <div class="res-info">
+                    <span class="res-num" id="resTrees">0.2</span>
+                    <span class="res-lbl">Kurtarılan Ağaç (Adet/Yıl)</span>
+                  </div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-icon icon-water"><i class="fa-solid fa-droplet"></i></div>
+                  <div class="res-info">
+                    <span class="res-num" id="resWater">350</span>
+                    <span class="res-lbl">Tasarruf Edilen Su (Litre/Yıl)</span>
+                  </div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-icon icon-bolt"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="res-info">
+                    <span class="res-num" id="resEnergy">120</span>
+                    <span class="res-lbl">Elektrik Tasarrufu (kWh/Yıl)</span>
+                  </div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-icon icon-co2"><i class="fa-solid fa-smog"></i></div>
+                  <div class="res-info">
+                    <span class="res-num" id="resCo2">45</span>
+                    <span class="res-lbl">Engellenen CO₂ (Kg/Yıl)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-fun-fact" id="calcFunFact">
+                <i class="fa-solid fa-lightbulb"></i> <span>Tasarruf ettiğiniz enerji ile <strong>400 saat boyunca LED ampul</strong> yakabilirsiniz!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MYTH VS FACT (EFSANE VS GERÇEK) -->
+    <section class="section myths-section" id="efsaneler">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Doğru Bilinen Yanlışlar</span>
+          <h2 class="section-title">Geri Dönüşüm Efsaneleri ve Gerçekler</h2>
+          <p class="section-desc">Kartların üzerine tıklayarak veya fareyle yaklaşarak geri dönüşüm hakkında doğru sanılan hataları keşfedin.</p>
+        </div>
+
+        <div class="myths-grid">
+          <!-- Myth 1 -->
+          <div class="myth-card">
+            <div class="myth-card-inner">
+              <div class="myth-card-front">
+                <div class="myth-badge myth-wrong"><i class="fa-solid fa-xmark"></i> EFSANE</div>
+                <h3 class="myth-title">"Plastik üzerindeki her üçgen geri dönüştürülebilir demektir."</h3>
+                <p class="myth-hint">Detayı görmek için tıklayın <i class="fa-solid fa-rotate"></i></p>
+              </div>
+              <div class="myth-card-back">
+                <div class="myth-badge myth-right"><i class="fa-solid fa-check"></i> GERÇEK</div>
+                <p class="myth-detail">
+                  Üçgen içindeki 1'den 7'ye kadar olan rakamlar <strong>Reçine Kodudur</strong> (Plastiğin hammaddesini gösterir). 3 (PVC) ve 7 (Diğer) gibi bazı plastik türleri standart evsel geri dönüşüm tesislerinde işlenemeyebilir.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 2 -->
+          <div class="myth-card">
+            <div class="myth-card-inner">
+              <div class="myth-card-front">
+                <div class="myth-badge myth-wrong"><i class="fa-solid fa-xmark"></i> EFSANE</div>
+                <h3 class="myth-title">"Kutuları deterjan ve bol suyla gıcır gıcır yıkamalıyız."</h3>
+                <p class="myth-hint">Detayı görmek için tıklayın <i class="fa-solid fa-rotate"></i></p>
+              </div>
+              <div class="myth-card-back">
+                <div class="myth-badge myth-right"><i class="fa-solid fa-check"></i> GERÇEK</div>
+                <p class="myth-detail">
+                  Deterjanla yıkamak değerli tatlı su kaynaklarını israf eder! Kutuları sadece yemek artıklarından arındırmak veya çalkalamak yeterlidir. Aşırı yıkamaya gerek yoktur.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 3 -->
+          <div class="myth-card">
+            <div class="myth-card-inner">
+              <div class="myth-card-front">
+                <div class="myth-badge myth-wrong"><i class="fa-solid fa-xmark"></i> EFSANE</div>
+                <h3 class="myth-title">"Bütün cam parçalarını cam kumbarasına atabiliriz."</h3>
+                <p class="myth-hint">Detayı görmek için tıklayın <i class="fa-solid fa-rotate"></i></p>
+              </div>
+              <div class="myth-card-back">
+                <div class="myth-badge myth-right"><i class="fa-solid fa-check"></i> GERÇEK</div>
+                <p class="myth-detail">
+                  Pencere camı, borosilikat (Pyrex) ve aynaların erime sıcaklıkları farklıdır. Şişe ve kavanoz kumbaralarına atılırlarsa tüm geri dönüşüm serisini bozarlar!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 4 -->
+          <div class="myth-card">
+            <div class="myth-card-inner">
+              <div class="myth-card-front">
+                <div class="myth-badge myth-wrong"><i class="fa-solid fa-xmark"></i> EFSANE</div>
+                <h3 class="myth-title">"Atık yağlar sıcak suyla lavabodan dökülürse sorun olmaz."</h3>
+                <p class="myth-hint">Detayı görmek için tıklayın <i class="fa-solid fa-rotate"></i></p>
+              </div>
+              <div class="myth-card-back">
+                <div class="myth-badge myth-right"><i class="fa-solid fa-check"></i> GERÇEK</div>
+                <p class="myth-detail">
+                  Yağ soğuduğunda borularda taşlaşarak kanalizasyonları tıkar. <strong>1 Litre atık yağ 1 milyon litre temiz suyu kirletir.</strong> Yağlar kavanozda biriktirilip bitkisel atık yağ noktalarına verilmelidir!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE QUIZ SECTION -->
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-wrapper">
+          <div class="quiz-header">
+            <span class="section-subtitle">Bilgini Test Et</span>
+            <h2 class="section-title">Geri Dönüşüm Bilgi Yarışması</h2>
+            <p class="section-desc">5 soruda geri dönüşüm bilincini sınayın, puan kazanın ve "Eko-Kahraman" unvanını elde edin!</p>
+          </div>
+
+          <div class="quiz-card" id="quizCard">
+            <!-- Quiz Progress Bar -->
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" id="quizProgressFill" style="width: 20%;"></div>
+            </div>
+            
+            <div class="quiz-step-info">
+              <span id="quizStepText">Soru 1 / 5</span>
+              <span class="quiz-score-pill" id="quizScorePill">Puan: 0</span>
+            </div>
+
+            <!-- Quiz Content Container -->
+            <div id="quizContent">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUSTAINABILITY, UPCYCLING & COMPOST TIPS -->
+    <section class="section tips-section" id="ipuclari">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Pratik Yaşam İpuçları</span>
+          <h2 class="section-title">Sürdürülebilir Yaşam & Upcycling</h2>
+          <p class="section-desc">Evsel atıkları azaltmanın, kompost yapmanın ve eski eşyalara yeni hayat vermenin kolay yolları.</p>
+        </div>
+
+        <div class="tips-grid">
+          <!-- Tip Card 1 -->
+          <div class="tip-card">
+            <div class="tip-img-box">
+              <img src="assets/compost.jpg" alt="Evde Kompost Yapımı">
+              <div class="tip-tag"><i class="fa-solid fa-seedling"></i> Organik Yaşam</div>
+            </div>
+            <div class="tip-body">
+              <h3>Evde Kompost Nasıl Yapılır?</h3>
+              <p>Meyve-sebze kabukları, çay posaları ve kurumuş yaprakları değerli bir organik gübreye dönüştürün. Çöp miktarınızı %40 azaltın!</p>
+              <ul class="tip-list">
+                <li><i class="fa-solid fa-check text-success"></i> <strong>Yeşil Malzemeler:</strong> Sebze atıkları, taze çim, kahve telvesi.</li>
+                <li><i class="fa-solid fa-check text-success"></i> <strong>Kahverengi Malzemeler:</strong> Kuru yaprak, karton parçaları, dal.</li>
+                <li><i class="fa-solid fa-xmark text-danger"></i> <strong>Konulmaması Gerekenler:</strong> Et, süt ürünleri, pişmiş yağlı yemekler.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tip Card 2 -->
+          <div class="tip-card">
+            <div class="tip-img-box">
+              <img src="assets/sorting.jpg" alt="İleri Dönüşüm (Upcycling) Fikirleri">
+              <div class="tip-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> İleri Dönüşüm</div>
+            </div>
+            <div class="tip-body">
+              <h3>Upcycling (İleri Dönüşüm) Nedir?</h3>
+              <p>Atmak üzere olduğunuz eşyaları geri dönüştürme sürecine sokmadan, kendi yaratıcılığınızla daha değerli yeni nesnelere çevirin.</p>
+              <ul class="tip-list">
+                <li><i class="fa-solid fa-lightbulb text-warning"></i> Cam kavanozlardan şık mumluklar ve saksılar yapın.</li>
+                <li><i class="fa-solid fa-lightbulb text-warning"></i> Eski kot pantolonlardan bez alışveriş torbaları dikin.</li>
+                <li><i class="fa-solid fa-lightbulb text-warning"></i> Ahşap paletlerden bahçe mobilyaları tasarlayın.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPLAMA NOKTALARI SIMULATOR -->
+    <section class="section dropoff-section" id="noktalar">
+      <div class="container">
+        <div class="dropoff-card">
+          <div class="dropoff-info">
+            <span class="section-subtitle light">Nereye Atmalıyım?</span>
+            <h2 class="section-title text-white">Atık Toplama & Kumbara Rehberi</h2>
+            <p class="text-white-80">Geri dönüştürülebilir malzemelerinizi türüne göre doğru toplama noktalarına ulaştırın.</p>
+            
+            <div class="dropoff-types" id="dropoffTypes">
+              <div class="dtype-item active" data-type="pil">
+                <i class="fa-solid fa-battery-three-quarters"></i>
+                <span>Atık Pil Kumbarası</span>
+              </div>
+              <div class="dtype-item" data-type="yag">
+                <i class="fa-solid fa-oil-can"></i>
+                <span>Atık Yağ Noktası</span>
+              </div>
+              <div class="dtype-item" data-type="e-atik">
+                <i class="fa-solid fa-desktop"></i>
+                <span>E-Atık Getirme Merkezi</span>
+              </div>
+              <div class="dtype-item" data-type="tekstil">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Giysi & Tekstil Kumbarası</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropoff-display" id="dropoffDisplay">
+            <!-- Dynamic Info display based on selected type -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MATERIAL DETAIL MODAL -->
+  <div class="modal-backdrop" id="materialModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody">
+        <!-- Filled dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="#" class="logo footer-logo">
+          <div class="logo-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div class="logo-text"><span>Eko</span>Dönüşüm</div>
+        </a>
+        <p class="footer-desc">Gelecek nesillere yaşanabilir, temiz ve sürdürülebilir bir dünya bırakmak için atıklarımızı bilerek dönüştürüyoruz.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hızlı Bağlantılar</h4>
+        <ul>
+          <li><a href="#hero">Anasayfa</a></li>
+          <li><a href="#rehber">Atık Arama Rehberi</a></li>
+          <li><a href="#hesaplayici">Eko-Tasarruf Hesaplayıcı</a></li>
+          <li><a href="#efsaneler">Doğru Bilinen Yanlışlar</a></li>
+          <li><a href="#quiz">Geri Dönüşüm Testi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atık Kategorileri</h4>
+        <ul>
+          <li><a href="#rehber">Plastik Atıklar (PET, HDPE)</a></li>
+          <li><a href="#rehber">Kağıt & Karton</a></li>
+          <li><a href="#rehber">Cam Ambalajlar</a></li>
+          <li><a href="#rehber">Alüminyum & Metal</a></li>
+          <li><a href="#rehber">Elektronik Atıklar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 EkoDönüşüm Rehberi. Tüm hakları saklıdır. Doğa Dostu Tasarım 🌱</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JS JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
