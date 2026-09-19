@@ -46,8 +46,10 @@ function initMobileNav() {
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
+  const navbar = document.querySelector('.navbar');
 
-  mobileToggle.addEventListener('click', () => {
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle('active');
     const icon = mobileToggle.querySelector('i');
     if (navMenu.classList.contains('active')) {
@@ -62,6 +64,13 @@ function initMobileNav() {
       navMenu.classList.remove('active');
       mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
     });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && !navbar.contains(e.target)) {
+      navMenu.classList.remove('active');
+      mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+    }
   });
 }
 

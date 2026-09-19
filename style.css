@@ -1443,52 +1443,456 @@ img {
   color: var(--text-muted);
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES & MOBILE DESIGN SYSTEM
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (<= 992px) */
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    text-align: center;
   }
-  .hero-title { font-size: 2.8rem; }
-  .calc-grid, .dropoff-card, .tips-grid {
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-img {
+    height: 380px;
+  }
+
+  .calc-grid, 
+  .dropoff-card, 
+  .tips-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Mobile Devices & Tablets (<= 768px) */
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    top: 76px;
-    left: 0;
-    width: 100%;
-    background: var(--bg-card);
-    flex-direction: column;
-    padding: 24px;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-    display: none;
+  html {
+    font-size: 15px;
   }
 
-  .nav-menu.active {
-    display: flex;
+  .container {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+  }
+
+  /* Announcement Bar */
+  .announcement-bar {
+    font-size: 0.825rem;
+    padding: 8px 0;
+  }
+
+  .announcement-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  /* Navigation Bar Mobile Menu Drawer */
+  .navbar {
+    padding: 12px 0;
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card-subtle);
+    border: 1px solid var(--border-color);
   }
 
   .nav-btn {
     display: none;
   }
 
+  .nav-menu {
+    position: fixed;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-card);
+    flex-direction: column;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.3s ease;
+    gap: 6px;
+    align-items: stretch;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    max-height: calc(100vh - 67px);
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+    padding: 16px 20px 24px 20px;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 40px 0 60px 0;
+  }
+
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .hero-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .hero-img {
+    height: 280px;
+  }
+
+  /* Hero Floating Cards Adjustments for Mobile Bounds */
+  .hero-floating-card {
+    position: static;
+    animation: none;
+    margin: 12px 0 0 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Stats Section Mobile */
+  .stats-section {
+    padding: 36px 0;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 18px 12px;
+  }
+
+  .stat-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-unit {
+    font-size: 1rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* Material Guide Controls & Swipable Category Tabs */
+  .search-box input {
+    padding: 14px 44px 14px 48px;
+    font-size: 0.95rem;
+  }
+
+  .search-icon {
+    left: 16px;
+    font-size: 1.05rem;
+  }
+
+  .clear-search {
+    right: 14px;
+  }
+
+  .category-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 4px 2px 10px 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Eco Calculator Mobile */
   .calculator-card {
-    padding: 28px;
+    padding: 28px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .calc-header {
+    margin-bottom: 32px;
+  }
+
+  .calc-ai-notice {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .calc-grid {
+    gap: 28px;
+  }
+
+  .input-group {
+    padding: 16px 18px;
+  }
+
+  .input-label-row label {
+    font-size: 0.875rem;
+  }
+
+  .calc-results {
+    padding: 22px 16px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .res-card {
+    padding: 14px;
+  }
+
+  .res-num {
+    font-size: 1.3rem;
+  }
+
+  /* Myths Section Mobile */
+  .myths-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .myth-card {
+    height: 240px;
+  }
+
+  .myth-card-front, .myth-card-back {
+    padding: 20px 16px;
+  }
+
+  .myth-title {
+    font-size: 1.05rem;
+  }
+
+  /* Quiz Section Mobile */
+  .quiz-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .quiz-q-title {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+  }
+
+  .quiz-opt-btn {
+    padding: 14px 16px;
+    font-size: 0.925rem;
+  }
+
+  /* Upcycling & Tips Mobile */
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tip-img-box {
+    height: 200px;
+  }
+
+  .tip-body {
+    padding: 22px 18px;
+  }
+
+  .tip-body h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Dropoff Section Mobile */
+  .dropoff-card {
+    padding: 28px 18px;
+    gap: 28px;
+  }
+
+  .dropoff-display {
+    padding: 20px 16px;
+  }
+
+  .dropoff-display h3 {
+    font-size: 1.25rem;
+  }
+
+  .loc-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Footer Mobile */
+  .footer {
+    padding-top: 50px;
   }
 
   .footer-container {
     grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  /* Modal Mobile */
+  .modal-content {
+    padding: 28px 20px;
+    max-height: 88vh;
+    overflow-y: auto;
   }
 }
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .calculator-card {
+    padding: 22px 14px;
+  }
+
+  .input-label-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .input-val-display {
+    align-self: flex-end;
+  }
+}
+
